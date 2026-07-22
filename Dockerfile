@@ -1,8 +1,6 @@
 FROM php:8.4-fpm-alpine AS php
 
-RUN apk add --no-cache curl-dev libpng-dev $PHPIZE_DEPS
+RUN docker-php-ext-install pdo_mysql
 
-RUN docker-php-ext-install curl exif gd pdo_mysql
+RUN install -o www-data -g www-data -d /var/www/upload/image/
 
-RUN pecl install apcu \
-    && docker-php-ext-enable apcu
