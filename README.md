@@ -140,6 +140,6 @@ SELECT * FROM posts ORDER BY id DESC;
 ブラウザで以下のURLへアクセスしてください。
 
 ```
-http://<EC2のパブリックIP>/
+http://<EC2のパブリックIP>/posts.php
 ```
 
